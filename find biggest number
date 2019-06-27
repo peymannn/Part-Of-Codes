@@ -1,0 +1,44 @@
+#include <stdio.h>	
+#include <conio.h>	
+void main()	
+{	
+        int abc,a,b,c;	
+        printf("üc haneli bir sayi giriniz:");           scanf("%d",&abc);	
+        printf("cozumlenecek sayi:%d\n\n",abc);	
+        printf("girilen sayi %d.\n\n",abc);	
+        a=abc/100;	
+        b=((abc%100)/10);	
+        c=(abc%10);	
+		int temp;	
+
+
+ 	/*	if(b>a)	
+	   //int temp;	
+   temp=a;	
+   a=b;	
+   b=temp;	
+   if(c>a)	
+	  // int temp;	
+   temp=a;	
+   a=c;	
+   c=temp;	
+   if(c>b)	
+	   //int temp;	
+   temp=b;	
+   b=c;	
+   b=temp;	
+
+
+    printf("en büyük sayi:%d%d%d",a,c,b); */	
+
+    if(a>b && a>c)	
+	   printf("1.basamaktaki en büyük.");	
+   else if(b>a && b>c)	
+	   printf("2.basamaktaki en büyük.");	
+   else if(c>b && c>a)	
+ 	   printf("3.basamaktaki en büyük.");	
+
+
+
+
+ }
