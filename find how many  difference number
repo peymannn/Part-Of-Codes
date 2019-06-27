@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+        int abcd,a,b,c,d,sayac=1;
+        printf("Dort haneli bir sayi giriniz:");           scanf("%d",&abcd);
+        printf("cozumlenecek sayi:%d\n\n",abcd);
+        printf("girilen sayi %d.\n\n",abcd);
+        a=abcd/1000;
+        b=((abcd%1000)/100);
+        c=((abcd%1000)%100)/10;
+        d=((abcd%1000)%100)%10;
+        if(a!=b && a!=c && a!=d)
+			sayac++;
+		if(b!=c && b!=d)
+			sayac++;
+			if(c!=d)
+				sayac++;
+			printf("%d sayi farkli\n",sayac);
+        
+}  
