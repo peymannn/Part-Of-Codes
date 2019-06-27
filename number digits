@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
+void main()
+{
+	int abcd,binler,yuzler,onlar,birler;
+	printf("Dort haneli bir sayi giriniz:");           scanf("%d",&abcd);
+	printf("cozumlenecek sayi:%d\n\n",abcd);
+	printf("girilen sayi %d.\n\n",abcd);
+	binler=abcd/1000;
+    yuzler=((abcd%1000)/100);
+	onlar=((abcd%1000)%100)/10;
+	birler=((abcd%1000)%100)%10;
+	
+	
+	
+	printf("%d  tane binlik sayi\n \n",binler);
+	printf("%d  tane yuzluk sayi\n\n ",yuzler);
+	printf("%d  tane onluk sayi \n\n",onlar);
+	printf("%d  tane birlik sayi \n\n",birler);
+	getch();
+}
