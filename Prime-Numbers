@@ -1,1 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Sayi Giriniz:\n");
+
+            while (true)
+            {
+
+                string input = Console.ReadLine();
+                bool isnumber = int.TryParse(input, out int number);
+                int x, count = 0;
+                if (isnumber == false || number < 0)
+                {
+                    Console.WriteLine("Doğal sayı değil ");
+
+                }
+
+                else
+                {
+                    switch (number)
+                    {
+                        case 0:
+                            {
+                                Console.WriteLine("Goodby!");
+                                Environment.Exit(0);
+                                break;
+                            }
+                        case 1:
+                            {
+                                Console.WriteLine("1 asal sayi değildir");
+                                Console.WriteLine("cikmak için 0 a basın\n");
+                                break;
+                            }
+
+                        case 2:
+                            Console.WriteLine(number + " Asaldır\n");
+                            Console.WriteLine("cikmak için 0 a basın\n");
+                            break;
+
+                        default:
+                            {
+                                for (int i = 2; i < number; i++)
+                                {
+                                    x = number % i;
+                                    if (x == 0)
+                                    {
+                                        Console.WriteLine(number + " Asal sayi değildir.\n");
+                                        count = 0;
+                                        break;
+                                    }
+                                    else if (x != 0)
+                                    {
+                                        count++;
+
+                                    }
+                                }
+                                if (count != 0)
+                                {
+                                    Console.WriteLine(number + " Asaldır\n");
+                                    count = 0;
+                                }
+                                Console.WriteLine("cikmak için 0 a basın\n");
+                                break;
+
+                            }
+                    }
+                }
+
+            }
+        }
+    }
+}
