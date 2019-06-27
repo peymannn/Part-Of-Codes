@@ -1,0 +1,14 @@
+ private void Button1_Click(object sender, EventArgs e)
+        {
+            string metin = textBox1.Text.Trim();
+            
+            int basi = metin.IndexOf('┐');
+            int sonu = metin.IndexOf('└') - 1;
+
+            String result = "";
+            result = metin.Substring(basi + 1, sonu - basi);
+            MessageBox.Show(result);
+
+            textBox1.Clear();       
+                        
+        }
