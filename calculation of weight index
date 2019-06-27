@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<math.h>
+#include <conio.h>
+void main()
+{
+	int kilo;
+	float boy;
+	char cinsiyet;
+	printf("cinsiyetinizi giriniz[E/K]:");  
+	scanf("%c",&cinsiyet);
+	printf("kilonuzu giriniz:");
+	scanf("%d",&kilo);
+	printf("boyunuzu giriniz:");
+	scanf("%f",&boy);
+	float vki=kilo/(boy*boy);
+	if(cinsiyet='E'  &&   20.7>vki)
+	{
+		printf("zayifsiniz.saglik riski!");
+	}
+	else if(cinsiyet='K' && 19.1>vki)
+	{
+      printf("zayifsiniz.saglik riski!");
+	}
+    else if(cinsiyet='E'  && 20.7<vki &&  vki<26.4)
+	{
+		printf("normalsiniz. risk yok");
+	}
+	else if(cinsiyet='K' && 19.1<vki &&   vki<25.8)
+	{
+		printf("normalsiniz. risk yok");
+	}
+	else if(cinsiyet='E'  && 26.5<vki &&  vki<31.1)
+		{
+		printf("sismanlik sınırında riskli!");
+	}
+	else if(cinsiyet='K'  && 25.9<vki &&  vki<32.2)
+		{
+		printf("sismanlik sınırında riskli!");
+	}
+	else if(cinsiyet='E'  && 31.2<vki )
+		{
+		printf("Obozite ciddi derecede  riskli!");
+	}
+	else if(cinsiyet='K'  && 32.3<vki )
+		{
+		printf("Obozite ciddi derecede  riskli!");
+	}
+
+	getch();
+}
