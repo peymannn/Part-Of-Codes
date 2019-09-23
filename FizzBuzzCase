@@ -1,0 +1,39 @@
+public class FizzBuzzCase {
+    public static void main(String[] args) {
+        String result;
+        for (int i=0;i<100;i++){
+            result=FizzBuzzCalculate(3,5,i);
+            System.out.println(result);
+        }
+    }
+
+    public static String FizzBuzzCalculate(int fizz,int buzz,int number){
+        boolean result1=numberDivision(number,fizz);
+        boolean result2=numberDivision(number,buzz);
+         String output;
+        switch (result1+" "+result2){
+            case "true true":
+                output= "Fizz Buzz";
+                break;
+            case "true false":
+                output= "Fizz";
+                break;
+            case "false true":
+                output= "Buzz";
+                break;
+            case "false false":
+                output= number+"";
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + result1 + " " + result2);
+        }
+       return output;
+    }
+
+    public static boolean numberDivision(int number,int divided){
+        if(number%divided==0)
+            return true;
+        else
+            return false;
+    }
+}
